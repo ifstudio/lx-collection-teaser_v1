@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+@font-face {
+  font-family: "Visby Light";
+  src: url("/VisbyCF-Light.otf");
+}
 
 /* Color schemes */
 .demo-4 {
@@ -9,7 +13,7 @@
 	--color-link-hover: #fff;
 	--color-info: #fff;
 	--color-scroll-text: #fff;
-	--font-scroll-text: 'Archivo Black', monospace;
+	--font-scroll-text: "Visby Light";
   --fontsize-scroll-text: 8vw;
   height: 100vh;
   width: 100%;

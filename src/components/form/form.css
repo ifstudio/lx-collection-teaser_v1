@@ -2,6 +2,7 @@ input,
 button {
   position: absolute;
   /* top: 50%; */
+  
   left: 50%;
   -webkit-transform: translate(-50%, -300%);
           transform: translate(-50%, -300%);
@@ -36,9 +37,9 @@ input::selection {
 button,
 .signup-button {
   padding: .25em 0;
-  border: 0;
+  border: 1px solid #fff;
   outline: 0;
-  background: #bb1515;
+  background: transparent;
   color: rgba(255, 255, 255, 0.85);
   font-size: 2rem;
   line-height: 3.6rem;
@@ -112,6 +113,7 @@ input:focus + label .nav-dot:before {
 .signup-button-trigger {
   position: absolute;
   /* top: 50%; */
+  bottom: -170%;
   left: 50%;
   -webkit-transform: translate(-50%, -100%);
           transform: translate(-50%, -100%);
