@@ -1,0 +1,249 @@
+%!Adobe-FontList 1.16
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:AkzidenzGroteskBE-Bold
+OutlineFileName:\AkzidenzGroteskBE-Bold
+ResourceID:11447
+MacStyle:0
+FileLength:13760
+FileModTime:1395332808
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:AkzidenzGroteskBE-Bold
+FamilyName:Berthold Akzidenz Grotesk
+StyleName:Bold
+MenuName:Akzidenz Grotesk BE Bold
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Berthold Akzidenz Grotesk BE Bold
+WritingScript:Roman
+OutlineFileName:\AkzidGroBEBol
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+FileModTime:836315800
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Gotham-Bold
+FamilyName:Gotham
+StyleName:Bold
+MenuName:Gotham
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Gotham-Bold
+WritingScript:Roman
+OutlineFileName:\Gotham-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:30012
+FileModTime:1162597748
+NameArray:0,Mac,4,Gotham-Bold
+NameArray:0,Win,1,Gotham
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Gotham-Light
+FamilyName:Gotham Light
+StyleName:Regular
+MenuName:Gotham Light
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:Gotham-Light
+WritingScript:Roman
+OutlineFileName:\Gotham-Light.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:29656
+FileModTime:1162597748
+NameArray:0,Mac,4,Gotham-Light
+NameArray:0,Win,1,Gotham Light
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Regular
+FamilyName:Minion Pro
+StyleName:Regular
+MenuName:Minion Pro
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Minion Pro
+WritingScript:Roman
+OutlineFileName:\MinionPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:205608
+FileModTime:1200718988
+DesignSize:110
+NameArray:0,Mac,4,Minion Pro
+NameArray:0,Win,1,Minion Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Quainton
+FamilyName:Quainton
+StyleName:Regular
+MenuName:Quainton
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Quainton
+WritingScript:Roman
+OutlineFileName:\Quainton.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:130740
+FileModTime:1498146780
+NameArray:0,Mac,18,Quainton
+NameArray:0,Mac,4,Quainton
+NameArray:0,Win,1,Quainton
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:SofiaProBold
+FamilyName:Sofia Pro
+StyleName:Bold
+MenuName:Sofia Pro Bold
+StyleBits:2
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Sofia Pro Bold
+WritingScript:Roman
+OutlineFileName:\SofiaProBold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:92760
+FileModTime:1469719270
+NameArray:0,Mac,4,Sofia Pro Bold
+NameArray:0,Win,1,Sofia Pro Bold
+NameArray:0,Win,16,Sofia Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:SofiaProLight
+FamilyName:Sofia Pro
+StyleName:Light
+MenuName:Sofia Pro Light
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Sofia Pro Light
+WritingScript:Roman
+OutlineFileName:\SofiaProLight.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:89320
+FileModTime:1469719278
+NameArray:0,Mac,4,Sofia Pro Light
+NameArray:0,Win,1,Sofia Pro Light
+NameArray:0,Win,16,Sofia Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:SofiaProMedium
+FamilyName:Sofia Pro
+StyleName:Medium
+MenuName:Sofia Pro Medium
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Sofia Pro Medium
+WritingScript:Roman
+OutlineFileName:\SofiaProMedium.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:90512
+FileModTime:1469719280
+NameArray:0,Mac,4,Sofia Pro Medium
+NameArray:0,Win,1,Sofia Pro Medium
+NameArray:0,Win,16,Sofia Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:VisbyCF-DemiBold
+FamilyName:Visby CF
+StyleName:Demi Bold
+MenuName:Visby CF Demi Bold
+StyleBits:0
+WeightClass:600
+WidthClass:5
+AngleClass:0
+FullName:Visby CF Demi Bold
+WritingScript:Roman
+OutlineFileName:\VisbyCF-DemiBold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:45908
+FileModTime:1507109110
+NameArray:0,Mac,4,Visby CF Demi Bold
+NameArray:0,Win,1,Visby CF Demi Bold
+NameArray:0,Win,16,Visby CF
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:VisbyCF-Light
+FamilyName:Visby CF
+StyleName:Light
+MenuName:Visby CF Light
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:Visby CF Light
+WritingScript:Roman
+OutlineFileName:\VisbyCF-Light.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:46344
+FileModTime:1507109110
+NameArray:0,Mac,4,Visby CF Light
+NameArray:0,Win,1,Visby CF Light
+NameArray:0,Win,16,Visby CF
+%EndFont
+

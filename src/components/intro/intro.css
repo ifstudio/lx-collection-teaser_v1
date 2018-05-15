@@ -1,0 +1,15 @@
+.intro {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000;
+}
+.morph {
+  margin: auto;
+  display: block;
+}
+svg {
+  fill: #fff;
+}

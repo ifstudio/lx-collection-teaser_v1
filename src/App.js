@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Intro from './components/intro/intro'
+import Main from './components/main/main'
 import './App.css'
 
 class App extends Component {
@@ -26,40 +28,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <main>
-          <div className="content">
-            <div className="content__section">
-              <h2 className="content__text">LX Collection</h2>
-            </div>
-            <div className="content__section">
-              <a className="content__link">
-                <img className="content__img" src="img/bw1.jpg" alt="img" />
-              </a>
-              <h2 className="content__text">Featured Cities</h2>
-            </div>
-            <div className="content__section">
-              <a className="content__link">
-                <img className="content__img" src="img/bw2.jpg" alt="img" />
-              </a>
-              <h2 className="content__text">Design Awards</h2>
-            </div>
-            <div className="content__section">
-              <a className="content__link">
-                <img className="content__img" src="img/bw3.jpg" alt="img" />
-              </a>
-              <h2 className="content__text">News</h2>
-            </div>
-            <div className="content__section">
-              <a className="content__link">
-                <img className="content__img" src="img/bw4.jpg" alt="img" />
-              </a>
-              <h2 className="content__text">Contact</h2>
-            </div>
-          </div>
-        </main>
+      <Intro />
+      <Main />
       </div>
     )
   }
 }
 
 export default App
+
+
