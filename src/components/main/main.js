@@ -28,32 +28,38 @@ class Main extends Component {
       <main className="main">
         <div className="content">
           <div className="content__section">
-            <h2 className="content__text">LX Collection</h2>
-          </div>
-          <div className="content__section">
-            <a className="content__link">
-              <img className="content__img" src="img/bw1.jpg" alt="img" />
-            </a>
-            <h2 className="content__text">Featured Cities</h2>
+            <h2 className="content__text">Discerning</h2>
           </div>
           <div className="content__section">
             <a className="content__link">
               <img className="content__img" src="img/bw2.jpg" alt="img" />
             </a>
-            <h2 className="content__text">Design Awards</h2>
+            <h2 className="content__text">Refined</h2>
           </div>
           <div className="content__section">
             <a className="content__link">
-              <img className="content__img" src="img/bw3.jpg" alt="img" />
+              <img className="content__img" src="img/bg2.jpg" alt="img" />
             </a>
-            <h2 className="content__text">News</h2>
+            <h2 className="content__text">Curated</h2>
           </div>
           <div className="content__section">
             <a className="content__link">
               <img className="content__img" src="img/bw4.jpg" alt="img" />
             </a>
+            <h2 className="content__text">Elevated</h2>
+          </div>
+          <div className="content__section">
+            <a className="content__link">
+              <img className="content__img" src="img/cuffs.jpg" alt="img" />
+            </a>
+            <h2 className="content__text">Elevated</h2>
+          </div>
+          <div className="content__section">
+            <a className="content__link">
+              <img className="content__img" src="img/girl.jpg" alt="img" />
+            </a>
             <Form />
-            <h2 className="content__text">Contact</h2>
+            <h2 className="content__text">Iconic</h2>
           </div>
         </div>
       </main>
@@ -62,3 +68,40 @@ class Main extends Component {
 }
 
 export default Main
+
+{/* <div className="content">
+<div className="content__section">
+  <h2 className="content__text">Discerning</h2>
+</div>
+<div className="content__section">
+  <a className="content__link">
+    <img className="content__img" src="img/car_window.jpg" alt="img" />
+  </a>
+  <h2 className="content__text">Refined</h2>
+</div>
+<div className="content__section">
+  <a className="content__link">
+    <img className="content__img" src="img/roof.jpg" alt="img" />
+  </a>
+  <h2 className="content__text">Curated</h2>
+</div>
+<div className="content__section">
+  <a className="content__link">
+    <img className="content__img" src="img/roof_pool.jpg" alt="img" />
+  </a>
+  <h2 className="content__text">Elevated</h2>
+</div>
+<div className="content__section">
+  <a className="content__link">
+    <img className="content__img" src="img/rain_car.jpg" alt="img" />
+  </a>
+  <h2 className="content__text">Elevated</h2>
+</div>
+<div className="content__section">
+  <a className="content__link">
+    <img className="content__img" src="img/bw4.jpg" alt="img" />
+  </a>
+  <Form />
+  <h2 className="content__text">Iconic</h2>
+</div>
+</div> */}

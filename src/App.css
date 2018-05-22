@@ -7,9 +7,10 @@
 /* Color schemes */
 .demo-4 {
 	--color-text: #fff;
-	--color-bg: #000 url(/img/bw1.jpg) no-repeat;
+	/* --color-bg: #000 url(/img/bw1.jpg) no-repeat; */
 	background-size: 80%;
 	--color-link: #828282;
+	background-color: #000;
 	--color-link-hover: #fff;
 	--color-info: #fff;
 	--color-scroll-text: #fff;
@@ -20,7 +21,11 @@
 }
 
 .content__img {
-	filter: brightness(1.5);
+	/* filter: brightness(1.5); */
+}
+img {
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(100%);
 }
 
 .content__section {
