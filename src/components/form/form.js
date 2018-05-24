@@ -41,7 +41,7 @@ export default class Form extends Component {
           </label>
           <button type="submit">Create Your Account</button>
           <p className="tip">Press Tab</p>
-          <div className="signup-button">Sign Up to be Notified</div>
+          <div className="signup-button">Subscribe</div>
         </form>
       </div>
     )
