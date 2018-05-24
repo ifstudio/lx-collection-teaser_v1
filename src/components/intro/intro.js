@@ -33,7 +33,16 @@ export default class Intro extends Component {
       active: 'L'
     }
   }
+
   componentDidMount() {
+    if(this.props.fireIntro) {
+      setTimeout(() => {
+        this.runAnimation()
+      }, 1000)
+    }
+  }
+
+  runAnimation = () => {
     setTimeout(() => {
       this.setState({
         active: 'X'
@@ -49,6 +58,9 @@ export default class Intro extends Component {
         active: 'logo'
       })
     }, 5000)
+    setTimeout(() => {
+      this.props.animationIsOver(true)
+    }, 7000)
   }
   render() {
     const toggle = () => {

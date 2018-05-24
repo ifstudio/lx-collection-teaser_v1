@@ -7,15 +7,13 @@
 /* Color schemes */
 .demo-4 {
 	--color-text: #fff;
-	/* --color-bg: #000 url(/img/bw1.jpg) no-repeat; */
-	background-size: 80%;
+	--color-bg: #000 url(/img/city-scape.jpg) no-repeat;
 	--color-link: #828282;
-	background-color: #000;
+	/* background-color: #000; */
 	--color-link-hover: #fff;
 	--color-info: #fff;
 	--color-scroll-text: #fff;
-	--font-scroll-text: "Visby Light";
-  --fontsize-scroll-text: 8vw;
+	--font-scroll-text: "Visby Light";	
   height: 100vh;
   width: 100%;
 }
@@ -27,7 +25,15 @@ img {
 	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
 	filter: grayscale(100%);
 }
-
+.textIntro {
+	position: absolute;
+	top: 70%;
+	text-align: center;
+	width: 100%;
+	font-family: "Visby Light";
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
 .content__section {
 	position: relative;
 }

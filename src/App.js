@@ -1,35 +1,55 @@
 import React, { Component } from 'react'
 import Intro from './components/intro/intro'
 import Main from './components/main/main'
+import TextIntro from './components/textIntro/textIntro'
 import './App.css'
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      fireIntro: false,
+      introIsRemoved: false
+    }
+  }
   componentDidMount() {
-    const script1 = document.createElement('script')
-    const script2 = document.createElement('script')
-    const script3 = document.createElement('script')
-    const script4 = document.createElement('script')
-    const body = document.querySelector('body')
-    const app = document.querySelector('.App')
-    
-    script1.src='/js/imagesloaded.pkgd.min.js'
-    script2.src='/js/charming.min.js'
-    script3.src='/js/anime.min.js'
-    script4.src='/js/demo4.js'
+   
+  }
 
-    const scripts = [script1, script2, script3, script4]
+  removeIntro = (isOver) => {
+    if ( isOver ) {
+     const introEl = document.querySelector('.intro')
+     introEl.classList.add('animated', 'fadeOut')
+     setTimeout(() => {
+      this.setState({
+        introIsRemoved: true
+      })
+     }, 2000)
+    }
+  }
 
-    scripts.forEach((script) => {
-      body.appendChild(script)
-    })
-    app.classList.remove('loading')
+  fireIntro = (mainIsLoaded) => {
+    if ( mainIsLoaded ) {
+      this.setState({
+        fireIntro: true
+      })
+    }
+  }
+
+  handleTextIntro = () => {
+
   }
 
   render() {
+    const { introIsRemoved, fireIntro } = this.state
+    const conditionalText = this.state.introIsRemoved ? <TextIntro /> : null
+    const conditionalIntro = this.state.fireIntro ? <Intro fireIntro={fireIntro} animationIsOver={this.removeIntro} /> : null 
+
     return (
       <div className="App">
-      <Intro />
-      <Main />
+      {conditionalIntro}
+      {conditionalText}
+      <Main mainIsLoaded={this.fireIntro} />
       </div>
     )
   }

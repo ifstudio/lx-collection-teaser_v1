@@ -3,13 +3,15 @@ import './form.css'
 export default class Form extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      
-    }
+    this.state = {}
   }
   render() {
     return (
       <div className="form_component">
+        <header>
+          <h2 className="">A highly curated collection of the most prestigious residences</h2>
+          <h2>Launching Fall 2018</h2>
+        </header>
         <form>
           <input id="input-1" type="text" placeholder="John Doe" required autofocus />
           <label for="input-1">
@@ -39,7 +41,7 @@ export default class Form extends Component {
           </label>
           <button type="submit">Create Your Account</button>
           <p className="tip">Press Tab</p>
-          <div className="signup-button">Sign Up</div>
+          <div className="signup-button">Sign Up to be Notified</div>
         </form>
       </div>
     )
