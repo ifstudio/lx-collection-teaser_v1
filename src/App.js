@@ -45,7 +45,7 @@ class App extends Component {
         text.classList.remove('fadeIn')
         text.classList.add('fadeOut')
       }
-    }, 5000)
+    }, 10000)
   }
 
   render() {
