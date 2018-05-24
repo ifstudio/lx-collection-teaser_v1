@@ -38,7 +38,7 @@ export default class Intro extends Component {
     if(this.props.fireIntro) {
       setTimeout(() => {
         this.runAnimation()
-      }, 1000)
+      }, 500)
     }
   }
 
