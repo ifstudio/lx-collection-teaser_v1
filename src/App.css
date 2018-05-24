@@ -17,6 +17,18 @@
   height: 100vh;
   width: 100%;
 }
+.logo {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	height: 150px;
+	width: 150px;
+	z-index: 10;
+}
+.logo svg {
+	height: 100%;
+	width: 100%;
+}
 
 .content__img {
 	/* filter: brightness(1.5); */

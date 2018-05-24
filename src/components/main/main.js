@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Form from '../form/form'
+import {Logo} from '../svg/logo'
 
 class Main extends Component {
 
@@ -28,6 +29,9 @@ class Main extends Component {
     
     return (
       <main className="main">
+        <span className='logo'>
+          <Logo />
+        </span>
         <div className="content">
           <div className="content__section">
             <h2 className="content__text">Discerning</h2>
@@ -40,6 +44,12 @@ class Main extends Component {
           </div>
           <div className="content__section">
             <a className="content__link">
+              <img className="content__img" src="img/girl.jpg" alt="img" />
+            </a>
+            <h2 className="content__text">Iconic</h2>
+          </div>
+          <div className="content__section">
+            <a className="content__link">
               <img className="content__img" src="img/bg2.jpg" alt="img" />
             </a>
             <h2 className="content__text">Curated</h2>
@@ -49,18 +59,6 @@ class Main extends Component {
               <img className="content__img" src="img/bw4.jpg" alt="img" />
             </a>
             <h2 className="content__text">Elevated</h2>
-          </div>
-          <div className="content__section">
-            <a className="content__link">
-              <img className="content__img" src="img/cross-walk.jpg" alt="img" />
-            </a>
-            <h2 className="content__text">Exceptional</h2>
-          </div>
-          <div className="content__section">
-            <a className="content__link">
-              <img className="content__img" src="img/girl.jpg" alt="img" />
-            </a>
-            <h2 className="content__text">Iconic</h2>
           </div>
           <div className="content__section">
             <h2 className="content__text">Preferential</h2>
@@ -76,6 +74,12 @@ class Main extends Component {
               <img className="content__img" src="img/piano.jpg" alt="img" />
             </a>
             <h2 className="content__text">Cultivated</h2>
+          </div>
+          <div className="content__section">
+            <a className="content__link">
+              <img className="content__img" src="img/cross-walk.jpg" alt="img" />
+            </a>
+            <h2 className="content__text">Exceptional</h2>
           </div>
           <div className="content__section">
             <a className="content__link">

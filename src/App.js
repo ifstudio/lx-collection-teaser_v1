@@ -25,6 +25,7 @@ class App extends Component {
         introIsRemoved: true
       })
      }, 2000)
+     this.handleTextIntro()
     }
   }
 
@@ -37,7 +38,14 @@ class App extends Component {
   }
 
   handleTextIntro = () => {
-
+    setTimeout(() => {
+      const text = document.querySelector('.textIntro')
+      console.log(text)
+      if(text) {
+        text.classList.remove('fadeIn')
+        text.classList.add('fadeOut')
+      }
+    }, 5000)
   }
 
   render() {

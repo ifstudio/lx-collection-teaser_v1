@@ -5,6 +5,8 @@
   flex-direction: column;
   justify-content: center;
   background-color: #000;
+  position: relative;
+  z-index: 15;
 }
 .morph {
   margin: auto;
