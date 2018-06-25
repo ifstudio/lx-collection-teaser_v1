@@ -39,19 +39,22 @@ class App extends Component {
 
   handleTextIntro = () => {
     setTimeout(() => {
-      const text = document.querySelector('.textIntro')
+      const text = document.querySelector('.textIntro__container')
+      const intro = document.querySelector('.intro')
       console.log(text)
       if(text) {
         text.classList.remove('fadeIn')
         text.classList.add('fadeOut')
+        text.style.display = 'none'
+        intro.style.display = 'none'
       }
     }, 10000)
   }
 
   render() {
     const { introIsRemoved, fireIntro } = this.state
-    const conditionalText = this.state.introIsRemoved ? <TextIntro /> : null
-    const conditionalIntro = this.state.fireIntro ? <Intro fireIntro={fireIntro} animationIsOver={this.removeIntro} /> : null 
+    const conditionalText = introIsRemoved ? <TextIntro /> : null
+    const conditionalIntro = fireIntro ? <Intro fireIntro={fireIntro} animationIsOver={this.removeIntro} /> : null 
 
     return (
       <div className="App">

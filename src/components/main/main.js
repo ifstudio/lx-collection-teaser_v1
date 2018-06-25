@@ -25,12 +25,19 @@ class Main extends Component {
     this.props.mainIsLoaded(true)
   }
 
+  scrollToBottom = () => window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: "smooth"
+})
+
+
   render() {
     
     return (
       <main className="main">
         <span className='logo'>
           <Logo />
+          <span className='sign_up__link' onClick={this.scrollToBottom}>Sign Up</span>
         </span>
         <div className="content">
           <div className="content__section">
