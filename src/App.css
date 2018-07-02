@@ -52,6 +52,12 @@
 img {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
+  transition: all .4s ease-in-out;
+}
+
+img:hover {
+  -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0);
 }
 
 .textIntro__container h2 {
