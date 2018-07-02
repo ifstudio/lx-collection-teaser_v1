@@ -33,47 +33,33 @@ export default class Intro extends Component {
       active: 'L'
     }
     this.increment = 0
-    this.swap()
+    
   }
 
   componentDidMount() {
     if (this.props.fireIntro) {
-      // setTimeout(() => {
-      //   this.runAnimation()
-      // }, 500)
+      this.swap()
     }
   }
+
+  endAnimation = () => {
+    setTimeout(() => {
+      this.props.animationIsOver(true)
+    }, 500)
+  }
+
   swap = () => {
     setInterval(() => {
       this.increment++
       if (this.increment < 3) {
         this.forceUpdate()
       } else if (this.increment === 3){
-        this.props.animationIsOver(true)
+        this.forceUpdate()
+        this.endAnimation()
       }
-    }, 1500)
+    }, 1000)
   }
 
-  runAnimation = () => {
-    setTimeout(() => {
-      this.setState({
-        active: 'X'
-      })
-    }, 2000)
-    setTimeout(() => {
-      this.setState({
-        active: 'C'
-      })
-    }, 3500)
-    setTimeout(() => {
-      this.setState({
-        active: 'logo'
-      })
-    }, 5000)
-    setTimeout(() => {
-      this.props.animationIsOver(true)
-    }, 7000)
-  }
   render() {
     const toggle = () => {
       if (this.state.active === 'L') {
@@ -87,13 +73,13 @@ export default class Intro extends Component {
       }
     }
     const icons = [<LSVG key="L-svg" />, <XSVG key="X-svg" />, <CSVG key="C-svg" />, <LogoSVG key="Logo-svg" />]
-    // duration={1000}
+    
     const active = icons[this.increment]
 
     return (
       <div className="intro">
         <div className="morph">
-          <MorphReplace width={600} height={700} easing={easeInQuint}>
+          <MorphReplace width={600} height={700} easing={easeInQuint} duration={500}>
             {/* {toggle()} */}
             {active}
           </MorphReplace>
