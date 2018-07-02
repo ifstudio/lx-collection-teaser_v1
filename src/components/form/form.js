@@ -19,27 +19,17 @@ export default class Form extends Component {
             <span className="nav-dot" />
             <div className="signup-button-trigger">Sign Up</div>
           </label>
-          <input id="input-2" type="text" placeholder="john" required />
+          <input id="input-2" type="email" placeholder="email@address.com" required />
           <label for="input-2">
-            <span className="label-text">Username</span>
-            <span className="nav-dot" />
-          </label>
-          <input id="input-3" type="email" placeholder="email@address.com" required />
-          <label for="input-3">
             <span className="label-text">Email</span>
             <span className="nav-dot" />
           </label>
-          <input id="input-4" type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required />
-          <label for="input-4">
-            <span className="label-text">Password</span>
+          <input id="input-3" type="text" placeholder="Yes or No" required />
+          <label for="input-3">
+            <span className="label-text">Broker?</span>
             <span className="nav-dot" />
           </label>
-          <input id="input-5" type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required />
-          <label for="input-5">
-            <span className="label-text">Confirm Password</span>
-            <span className="nav-dot" />
-          </label>
-          <button type="submit">Create Your Account</button>
+          <button type="submit">Submit</button>
           <p className="tip">Press Tab</p>
           <div className="signup-button">Subscribe</div>
         </form>

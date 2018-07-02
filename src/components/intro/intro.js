@@ -32,14 +32,26 @@ export default class Intro extends Component {
     this.state = {
       active: 'L'
     }
+    this.increment = 0
+    this.swap()
   }
 
   componentDidMount() {
-    if(this.props.fireIntro) {
-      setTimeout(() => {
-        this.runAnimation()
-      }, 500)
+    if (this.props.fireIntro) {
+      // setTimeout(() => {
+      //   this.runAnimation()
+      // }, 500)
     }
+  }
+  swap = () => {
+    setInterval(() => {
+      this.increment++
+      if (this.increment < 3) {
+        this.forceUpdate()
+      } else if (this.increment === 3){
+        this.props.animationIsOver(true)
+      }
+    }, 1500)
   }
 
   runAnimation = () => {
@@ -74,11 +86,16 @@ export default class Intro extends Component {
         return <LogoSVG key="Logo-svg" />
       }
     }
+    const icons = [<LSVG key="L-svg" />, <XSVG key="X-svg" />, <CSVG key="C-svg" />, <LogoSVG key="Logo-svg" />]
+    // duration={1000}
+    const active = icons[this.increment]
+
     return (
       <div className="intro">
         <div className="morph">
-          <MorphReplace width={600} height={700} easing={easeInQuint} duration={1000}>
-            {toggle()}
+          <MorphReplace width={600} height={700} easing={easeInQuint}>
+            {/* {toggle()} */}
+            {active}
           </MorphReplace>
         </div>
       </div>

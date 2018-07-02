@@ -12,25 +12,26 @@ class App extends Component {
       introIsRemoved: false
     }
   }
-  componentDidMount() {
-   
-  }
+  componentDidMount() {}
 
-  removeIntro = (isOver) => {
-    if ( isOver ) {
-     const introEl = document.querySelector('.intro')
-     introEl.classList.add('animated', 'fadeOut')
-     setTimeout(() => {
-      this.setState({
-        introIsRemoved: true
-      })
-     }, 2000)
-     this.handleTextIntro()
+  removeIntro = isOver => {
+    if (isOver) {
+      const introEl = document.querySelector('.intro')
+      introEl.classList.add('animated', 'fadeOut')
+
+      this.setState(
+        {
+          introIsRemoved: true
+        },
+        () => {
+          this.handleTextIntro()
+        }
+      )
     }
   }
 
-  fireIntro = (mainIsLoaded) => {
-    if ( mainIsLoaded ) {
+  fireIntro = mainIsLoaded => {
+    if (mainIsLoaded) {
       this.setState({
         fireIntro: true
       })
@@ -42,30 +43,28 @@ class App extends Component {
       const text = document.querySelector('.textIntro__container')
       const intro = document.querySelector('.intro')
       console.log(text)
-      if(text) {
+      if (text) {
         text.classList.remove('fadeIn')
         text.classList.add('fadeOut')
         text.style.display = 'none'
         intro.style.display = 'none'
       }
-    }, 10000)
+    }, 5000)
   }
 
   render() {
     const { introIsRemoved, fireIntro } = this.state
     const conditionalText = introIsRemoved ? <TextIntro /> : null
-    const conditionalIntro = fireIntro ? <Intro fireIntro={fireIntro} animationIsOver={this.removeIntro} /> : null 
+    const conditionalIntro = fireIntro ? <Intro fireIntro={fireIntro} animationIsOver={this.removeIntro} /> : null
 
     return (
       <div className="App">
-      {conditionalIntro}
-      {conditionalText}
-      <Main mainIsLoaded={this.fireIntro} />
+        {conditionalIntro}
+        {conditionalText}
+        <Main mainIsLoaded={this.fireIntro} />
       </div>
     )
   }
 }
 
 export default App
-
-

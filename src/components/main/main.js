@@ -95,10 +95,7 @@ class Main extends Component {
             <h2 className="content__text">Uncommon</h2>
           </div>
           <div className="content__section">
-            <a className="content__link">
-              <img className="content__img" src="img/wrist-watch.jpg" alt="img" />
-            </a>
-            <h2 className="content__text"></h2>
+         
           </div>
           <div className="content__section">
             <Form />
