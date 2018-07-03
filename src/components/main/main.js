@@ -6,6 +6,7 @@ class Main extends Component {
 
   componentDidMount() {
 
+    const uncommon = document.getElementById('uncommon')
     const script1 = document.createElement('script')
     const script2 = document.createElement('script')
     const script3 = document.createElement('script')
@@ -23,7 +24,20 @@ class Main extends Component {
     })
     
     this.props.mainIsLoaded(true)
-    // window.scroll()
+    this.scrollHandler(uncommon)
+  }
+
+  scrollHandler = (el) => {
+    const getCurrentScroll = () => window.pageYOffset || document.documentElement.scrollTop
+    
+    window.onscroll = () => {
+      console.log("Current Scroll: ", getCurrentScroll())
+      if(getCurrentScroll() >= 6700) {
+        el.style.opacity = 0
+      } else {
+        // el.style.opacity = 1
+      }
+    }
   }
 
   scrollToBottom = () => window.scrollTo({
@@ -87,7 +101,7 @@ class Main extends Component {
             <a className="content__link">
               <img className="content__img" src="img/rain_car.jpg" alt="img" />
             </a>
-            <h2 className="content__text">Uncommon</h2>
+            <h2 className="content__text" id='uncommon'>Uncommon</h2>
           </div>
           <div className="content__section">
          
