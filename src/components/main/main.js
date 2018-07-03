@@ -23,6 +23,7 @@ class Main extends Component {
     })
     
     this.props.mainIsLoaded(true)
+    // window.scroll()
   }
 
   scrollToBottom = () => window.scrollTo({
@@ -72,7 +73,7 @@ class Main extends Component {
           </div>
           <div className="content__section">
             <a className="content__link">
-              <img className="content__img" src="img/pool-guy.jpg" alt="img" />
+              <img className="content__img" src="img/pool.jpg" alt="img" />
             </a>
             <h2 className="content__text">Elegant</h2>
           </div>
@@ -81,12 +82,6 @@ class Main extends Component {
               <img className="content__img" src="img/piano.jpg" alt="img" />
             </a>
             <h2 className="content__text">Cultivated</h2>
-          </div>
-          <div className="content__section">
-            <a className="content__link">
-              <img className="content__img" src="img/cross-walk.jpg" alt="img" />
-            </a>
-            <h2 className="content__text">Exceptional</h2>
           </div>
           <div className="content__section">
             <a className="content__link">
