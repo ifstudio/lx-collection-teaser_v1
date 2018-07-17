@@ -10,6 +10,8 @@
   --color-bg: #000 url(/img/city-scape.jpg) no-repeat;
   --color-link: #828282;
   /* background-color: #000; */
+  background-size: cover;
+  background-position: bottom;
   --color-link-hover: #fff;
   --color-info: #fff;
   --color-scroll-text: #fff;
@@ -29,6 +31,22 @@
   height: 100%;
   width: 100%;
 }
+
+.logo svg:hover {
+  -webkit-animation: neon3 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon3 1.5s ease-in-out infinite alternate;
+  animation: neon3 1.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+  }
+}
+
 .logo .sign_up__link {
   position: absolute;
   bottom: -100px;
@@ -40,11 +58,20 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   font-size: 18px;
-  color: #bb1515;
+  color: #FFDD1B;
   cursor: pointer;
 	z-index: 20 !important;
-  -webkit-animation: heartbeat 3s ease-in-out infinite both;
-  animation: heartbeat 3s ease-in-out infinite both;
+  -webkit-animation: gold-glow 0.75s ease-in-out infinite alternate;
+  -moz-animation: gold-glow 0.75s ease-in-out infinite alternate;
+  animation: gold-glow 0.75s ease-in-out infinite alternate;
+}
+@-webkit-keyframes gold-glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+  }
 }
 .content__img {
   /* filter: brightness(1.5); */
@@ -60,12 +87,17 @@ img:hover {
   filter: grayscale(0);
 }
 
-.textIntro__container h2 {
+.introText {
   position: absolute;
   top: 50%;
   text-align: center;
   width: 40%;
   right: 50px;
+ 
+}
+.introText__header span {
+  opacity: 0;
+  transition: all .5s ease-in-out;
   font-family: 'Visby Light';
   letter-spacing: 3px;
 	text-transform: uppercase;

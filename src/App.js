@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-import Intro from './components/intro/intro'
+import IntroSVG from './components/introSVG'
 import Main from './components/main/main'
-import TextIntro from './components/textIntro/textIntro'
+import IntroText from './components/introText'
+
 import './App.css'
+const mojs = require('mo-js')
 
 class App extends Component {
   constructor() {
@@ -12,19 +14,41 @@ class App extends Component {
       introIsRemoved: false
     }
   }
-  componentDidMount() {}
+  componentDidMount() {
+    const burst = new mojs.Burst({
+      left: 0,
+      top: 0,
+      radius: { 0: 100 },
+      count: 5,
+      children: {
+        shape: 'circle',
+        radius: 20,
+        fill: ['deeppink', 'cyan', 'yellow'],
+        strokeWidth: 5,
+        duration: 2000
+      }
+    })
 
-  removeIntro = isOver => {
+    document.addEventListener('click', function(e) {
+      burst
+        .tune({ x: e.pageX, y: e.pageY })
+        .setSpeed(3)
+        .replay()
+    })
+  }
+
+  svgAnimationIsOver = (isOver) => {
     if (isOver) {
-      const introEl = document.querySelector('.intro')
+      const introEl = document.querySelector('.intro_animation')
       introEl.classList.add('animated', 'fadeOut')
+      introEl.style.display = 'none'
 
       this.setState(
         {
           introIsRemoved: true
         },
         () => {
-          this.handleTextIntro()
+          this.beginTextIntro()
         }
       )
     }
@@ -38,24 +62,24 @@ class App extends Component {
     }
   }
 
-  handleTextIntro = () => {
-    setTimeout(() => {
-      const text = document.querySelector('.textIntro__container')
-      const intro = document.querySelector('.intro')
-      console.log(text)
-      if (text) {
-        text.classList.remove('fadeIn')
-        text.classList.add('fadeOut')
-        text.style.display = 'none'
-        intro.style.display = 'none'
-      }
-    }, 5000)
+  beginTextIntro = () => {
+    // setTimeout(() => {
+    //   const text = document.querySelector('.textIntro__container')
+    //   const intro = document.querySelector('.intro')
+    //   console.log(text)
+    //   if (text) {
+    //     text.classList.remove('fadeIn')
+    //     text.classList.add('fadeOut')
+    //     text.style.display = 'none'
+    //     intro.style.display = 'none'
+    //   }
+    // }, 5000)
   }
 
   render() {
     const { introIsRemoved, fireIntro } = this.state
-    const conditionalText = introIsRemoved ? <TextIntro /> : null
-    const conditionalIntro = fireIntro ? <Intro fireIntro={fireIntro} animationIsOver={this.removeIntro} /> : null
+    const conditionalText = introIsRemoved ? <IntroText /> : null
+    const conditionalIntro = fireIntro ? <IntroSVG fireIntro={fireIntro} animationIsOver={this.svgAnimationIsOver} /> : null
 
     return (
       <div className="App">
