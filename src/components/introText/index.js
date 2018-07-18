@@ -19,7 +19,7 @@ export default class IntroText extends Component {
       <main id='IntroText'>
           <section className="mast">
             <header className="mast__header">
-              <h1 className="mast__title js-spanize"><span>LX</span> <span>Collections</span> <span>Presents</span></h1> 
+              <h1 className="mast__title js-spanize"><span>LX</span> <span>Collection</span> <span>Presents</span></h1> 
               <br />
               <hr className="sep"/>
               <br />
