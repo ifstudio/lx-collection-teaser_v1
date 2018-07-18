@@ -46,12 +46,12 @@
             });
 
             anime.remove(this.DOM.image);
-            anime({
-                targets: this.DOM.image,
-                duration: 800,
-                easing: 'easeOutQuad',
-                rotate: () => direction === 'down' ? 5 : -5
-            });
+            // anime({
+            //     targets: this.DOM.image,
+            //     duration: 800,
+            //     easing: 'easeOutQuad',
+            //     rotate: () => direction === 'down' ? 5 : -5
+            // });
         }
         exit(direction = 'down') {
             this.DOM.title.letters.forEach((letter,pos) => {

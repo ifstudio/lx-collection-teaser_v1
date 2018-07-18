@@ -21,6 +21,9 @@
 .mast.animation_finished, .animation_finished.mast:after {
   background-color: rgba(17, 17, 17, .2);
 }
+.mast.animation_finished .mast__title, .mast.animation_finished .mast__text {
+  opacity: 0;
+}
 .mast:after {
   z-index: 0;
   content: '';
@@ -55,9 +58,10 @@
 }
 .mast__title {
   font-family: "Cutive Mono", monospace;
-  font-size: 1em;
+  font-size: 3em;
   font-weight: 400;
   letter-spacing: 0.3em;
+  transition: all .6s ease-in-out;
   text-transform: uppercase;
   text-align: center;
 }
@@ -167,10 +171,11 @@
 }
 .mast__text {
   font-family: "Cutive Mono", monospace;
-  font-size: 1em;
+  font-size: 1.5em;
   margin: 0 0 0.5em;
   line-height: 1.5;
   white-space: pre;
+  transition: all .6s ease-in-out;
 }
 .mast__text span {
   -webkit-animation: letter-glow 0.7s 0s ease both;

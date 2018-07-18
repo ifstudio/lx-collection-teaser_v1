@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
-import { Mouse } from '../mouse/mouse'
-import anime from 'animejs'
 import './introText.css'
 
 export default class IntroText extends Component {
   componentDidMount() {
+    const intro = document.getElementById('IntroText')
     setTimeout(() => {
       document.querySelector('.mast').classList.add('animation_finished')
-    }, 2000)
+    }, 4000)
+    
+    setTimeout(() => {
+      this.props.endAnimation(intro)
+    }, 5000)
     
   }
 
@@ -23,7 +26,6 @@ export default class IntroText extends Component {
               <p className="mast__text js-spanize"><span>A</span> <span>new</span> <span>experience</span> <span>in</span> <span>the</span> <span>world</span> <span>of</span> <span>residential</span><br /> <span>listings</span> <span>is</span> <span>coming</span></p>
             </header>
           </section>
-          <Mouse />
         </main>
     )
   }

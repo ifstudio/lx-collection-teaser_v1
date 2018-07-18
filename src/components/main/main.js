@@ -11,16 +11,15 @@ class Main extends Component {
     const script2 = document.createElement('script')
     const script3 = document.createElement('script')
     const script4 = document.createElement('script')
-    // const script5 = document.createElement('script')
     const body = document.querySelector('body')
     
     script1.src = '/js/imagesloaded.pkgd.min.js'
     script2.src = '/js/charming.min.js'
     script3.src = '/js/anime.min.js'
     script4.src = '/js/demo4.js'
-    // script5.src = '/js/light-scribble.js'
-
+  
     const scripts = [script1, script2, script3, script4]
+
     scripts.forEach(script => {
       body.appendChild(script)
     })

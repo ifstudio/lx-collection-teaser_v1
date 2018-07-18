@@ -19,12 +19,12 @@ class App extends Component {
       left: 0,
       top: 0,
       radius: { 0: 100 },
-      count: 5,
+      count: 10,
       children: {
         shape: 'circle',
-        radius: 20,
-        fill: ['deeppink', 'cyan', 'yellow'],
-        strokeWidth: 5,
+        radius: 5,
+        fill: ['#FFDD1B', '#bb1515', '#fff'],
+        strokeWidth: 1,
         duration: 2000
       }
     })
@@ -46,9 +46,6 @@ class App extends Component {
       this.setState(
         {
           introIsRemoved: true
-        },
-        () => {
-          this.beginTextIntro()
         }
       )
     }
@@ -62,23 +59,11 @@ class App extends Component {
     }
   }
 
-  beginTextIntro = () => {
-    // setTimeout(() => {
-    //   const text = document.querySelector('.textIntro__container')
-    //   const intro = document.querySelector('.intro')
-    //   console.log(text)
-    //   if (text) {
-    //     text.classList.remove('fadeIn')
-    //     text.classList.add('fadeOut')
-    //     text.style.display = 'none'
-    //     intro.style.display = 'none'
-    //   }
-    // }, 5000)
-  }
+  introTextAnimationCompleted = (el) => el.style.display = 'none'
 
   render() {
     const { introIsRemoved, fireIntro } = this.state
-    const conditionalText = introIsRemoved ? <IntroText /> : null
+    const conditionalText = introIsRemoved ? <IntroText endAnimation={this.introTextAnimationCompleted} /> : null
     const conditionalIntro = fireIntro ? <IntroSVG fireIntro={fireIntro} animationIsOver={this.svgAnimationIsOver} /> : null
 
     return (

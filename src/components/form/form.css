@@ -232,3 +232,12 @@ form {
   height: 100%;
   overflow: hidden;
 }
+
+
+.form_svg .anim {
+  position: relative;
+  width: auto;
+  height: 40vh;
+  display: block;
+  margin: auto;
+}
