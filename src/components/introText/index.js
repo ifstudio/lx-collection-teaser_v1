@@ -6,11 +6,11 @@ export default class IntroText extends Component {
     const intro = document.getElementById('IntroText')
     setTimeout(() => {
       document.querySelector('.mast').classList.add('animation_finished')
-    }, 4000)
+    }, 5500)
     
     setTimeout(() => {
       this.props.endAnimation(intro)
-    }, 5000)
+    }, 6500)
     
   }
 

@@ -26,7 +26,7 @@ export default class Form extends Component {
     ) : (
       <React.Fragment>
         <header>
-          <h2 className="">A highly curated collection of the most prestigious residences</h2>
+          <h2 className="">A highly curated collection of the most prestigious residential listings in the world</h2>
           <h2>Launching Fall 2018</h2>
         </header>
         <form onSubmit={this.handleSubmit}>
