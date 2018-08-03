@@ -26,8 +26,10 @@ export default class Form extends Component {
     ) : (
       <React.Fragment>
         <header>
-          <h2 className="">A highly curated collection of the most prestigious residential listings in the world</h2>
-          <h2>Launching Fall 2018</h2>
+          <h2 className="">
+            A highly curated collection of the most prestigious condominiums and architecture in the world
+          </h2>
+          <h2>Coming Soon</h2>
         </header>
         <form onSubmit={this.handleSubmit}>
           <input id="input-1" type="text" placeholder="John Doe" required autofocus />
@@ -42,13 +44,9 @@ export default class Form extends Component {
             <span className="nav-dot" />
           </label>
           <input id="input-3" type="text" placeholder="Yes or No" required />
-          <label for="input-3">
-            <span className="label-text">Broker?</span>
-            <span className="nav-dot" />
-          </label>
           <button type="submit">Submit</button>
           <p className="tip">Press Tab</p>
-          <div className="signup-button">Subscribe</div>
+          <div className="signup-button">Sign up for exclusive updates</div>
         </form>
       </React.Fragment>
     )
@@ -112,3 +110,10 @@ class FormSVG extends Component {
     )
   }
 }
+
+const InputThree = () => (
+  <label for="input-3">
+    <span className="label-text">Broker?</span>
+    <span className="nav-dot" />
+  </label>
+)

@@ -30,3 +30,8 @@ export default class IntroText extends Component {
     )
   }
 }
+
+
+// A highly curated collection of the most prestigious condominiums and architecture in the world
+// </h2>
+// <h2>Coming Soon</h2>

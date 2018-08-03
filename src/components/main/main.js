@@ -7,6 +7,7 @@ class Main extends Component {
   componentDidMount() {
 
     const uncommon = document.getElementById('uncommon')
+    const signup = document.querySelector('.sign_up__link')
     const script1 = document.createElement('script')
     const script2 = document.createElement('script')
     const script3 = document.createElement('script')
@@ -25,18 +26,19 @@ class Main extends Component {
     })
     
     this.props.mainIsLoaded(true)
-    this.scrollHandler(uncommon)
+    this.scrollHandler(uncommon, signup)
   }
 
-  scrollHandler = (el) => {
+  scrollHandler = (uncommon, signup) => {
     const getCurrentScroll = () => window.pageYOffset || document.documentElement.scrollTop
     
     window.onscroll = () => {
       console.log("Current Scroll: ", getCurrentScroll())
       if(getCurrentScroll() >= 6700) {
-        el.style.opacity = 0
+        uncommon.style.opacity = 0
+        signup.style.opacity = 0
       } else {
-        // el.style.opacity = 1
+        signup.style.opacity = 1
       }
     }
   }
