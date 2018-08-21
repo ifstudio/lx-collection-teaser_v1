@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import IntroSVG from './components/introSVG'
-import Main from './components/main/main'
+import Main from './components/main'
 import IntroText from './components/introText'
 
 import './App.css'

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Form from '../form/form'
+import Form from '../form'
 import {Logo} from '../svg/logo'
 
 class Main extends Component {
@@ -69,7 +69,7 @@ class Main extends Component {
           </div>
           <div className="content__section">
             <a className="content__link">
-              <img className="content__img" src="img/girl.jpg" alt="img" />
+              <img className="content__img" src="img/plane.jpg" alt="img" />
             </a>
             <h2 className="content__text">Iconic</h2>
           </div>
