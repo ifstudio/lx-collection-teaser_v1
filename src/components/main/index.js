@@ -33,7 +33,7 @@ class Main extends Component {
     const getCurrentScroll = () => window.pageYOffset || document.documentElement.scrollTop
 
     window.onscroll = () => {
-      if (getCurrentScroll() >= 6700) {
+      if (getCurrentScroll() >= 7700) {
         uncommon.style.opacity = 0
         signup.style.opacity = 0
       } else {
@@ -85,8 +85,6 @@ class Main extends Component {
         text: 'Uncommon'
       }
     ]
-
-
 
     return (
       <main className="main">

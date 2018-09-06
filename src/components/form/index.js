@@ -81,8 +81,7 @@ export default class Form extends Component {
           <h2>Coming Soon</h2>
         </header>
         <form onSubmit={this.handleSubmit}>
-          <input name="username" placeholder="Username" type="text" />
-          <input id="pw" name="password" placeholder="Password" type="password" />
+          <input name="username" placeholder="Full Name" type="text" />
           <input name="email" placeholder="E-Mail Address" type="text" />
           <div className="agree">
             <input id="agree" name="agree" type="checkbox" />

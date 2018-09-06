@@ -5,11 +5,12 @@ export default class IntroText extends Component {
     const intro = document.getElementById('IntroText')
     setTimeout(() => {
       document.querySelector('.mast').classList.add('animation_finished')
-    }, 5500)
+      document.querySelector('.arrow_down').style.display = 'none'
+    }, 6500)
 
     setTimeout(() => {
       this.props.endAnimation(intro)
-    }, 6500)
+    }, 7500)
   }
 
   render () {
@@ -29,8 +30,14 @@ export default class IntroText extends Component {
               <br />  <span>in</span> <span>the</span> <span>world</span>
             </p>
           </header>
+          <ArrowDown />
         </section>
       </main>
     )
   }
 }
+const ArrowDown = () => (
+  <div className='arrow_down' style={{position: 'absolute', width: '100%', left: 0, bottom: '20px', height: '40px', display: 'flex', justifyContent: 'center'}}>
+    <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' className='feather feather-chevrons-down'><polyline points='7 13 12 18 17 13' /><polyline points='7 6 12 11 17 6' /></svg>
+  </div>
+)

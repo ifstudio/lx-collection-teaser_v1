@@ -101,9 +101,9 @@ img {
 }
 
 img:hover {
-  -webkit-filter: grayscale(0);
+  /* -webkit-filter: grayscale(0);
   /* Safari 6.0 - 9.0 */
-  filter: grayscale(0);
+  /* filter: grayscale(0); */
 }
 
 .introText {
@@ -112,6 +112,13 @@ img:hover {
   text-align: center;
   width: 40%;
   right: 50px;
+}
+.arrow_down {
+  z-index: 2000;;
+}
+.arrow_down svg {
+  fill: none!important;
+  stroke: #fff;
 }
 
 .introText__header span {
@@ -462,6 +469,9 @@ svg {
   text-transform: uppercase;
   -webkit-animation: letter-glow 0.7s 0s ease both;
   animation: letter-glow 0.7s 0s ease both;
+}
+.content__section:hover h2 {
+	/* animation: letter-glow 0.7s 0s ease both; */
 }
 
 .mast__title span:nth-child(1) {
@@ -2123,7 +2133,7 @@ p {
   letter-spacing: 3px;
   text-transform: uppercase;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 40px;
   text-align: center;
   margin: 20px 0 40px;
 }
@@ -2155,11 +2165,12 @@ input[type=checkbox] {
 }
 
 label {
-  display: block;
+  /* display: block; */
   position: absolute;
-  margin-right: 10px;
-  width: 8px;
-  height: 8px;
+  right: 130px;
+  bottom: 32px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: transparent;
   content: "";
@@ -2169,7 +2180,8 @@ label {
 }
 
 #agree:checked ~ label[for=agree] {
-  background: #ba2424;
+  background: #fff;
+  border: 1px solid #ba2424;
 }
 
 input[type="submit"] {
@@ -2185,8 +2197,7 @@ input[type="submit"] {
   transition: background 0.3s ease-in-out;
 }
 input[type="submit"]:hover {
-  background: #16aa56;
-  animation-name: shake;
+  /*  */
 }
 
 .forgot {
@@ -2197,23 +2208,24 @@ input[type="submit"]:hover {
   font-weight: bold;
 }
 .forgot:hover {
-  margin-top: 30px;
+  /* margin-top: 30px;
   display: block;
   font-size: 11px;
   text-align: center;
   font-weight: bold;
-  color: #6D7781;
+  color: #6D7781; */
 }
 
 .agree {
   padding: 30px 0px;
   font-size: 12px;
+  position: relative;
   text-indent: 25px;
   line-height: 15px;
 }
 
 ::-webkit-input-placeholder {
-  color: #435160;
+  color: #fff;
   font-size: 12px;
 }
 

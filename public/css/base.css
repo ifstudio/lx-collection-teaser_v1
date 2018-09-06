@@ -184,8 +184,9 @@ a.demo--current {
 .content__section {
 	position: relative;
 	text-align: right;
-	padding: 0 6vmax;
+	padding: 0 8vmax;
 }
+
 
 .content__section:first-child {
 	margin: 0 0 30vh;
