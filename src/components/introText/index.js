@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './introText.css'
 
 export default class IntroText extends Component {
   componentDidMount () {

@@ -1,33 +1,78 @@
 import React, { Component } from 'react'
 import anime from 'animejs'
-import './form.css'
 
 export default class Form extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      name: '',
-      email: '',
+      // name: '',
+      // email: '',
       broker: false,
-      formSubmitted: false
+      formSubmitted: false,
+      showSubmitButton: true
     }
   }
+
+  handleKeyPress = e => {
+    const { name, email, broker } = this.state
+    if (name.length === 0 || email.length === 0) {
+    }
+    if (e.key === 'Enter') {
+      console.log('enter has been hit')
+      e.preventDefault()
+    }
+  }
+
+  toggleBroker = e => {
+    e.preventDefault()
+    console.log(e.target)
+    document.querySelector('.yesno').setAttribute('focus', false)
+    console.log(e.target.getAttribute('value'))
+    this.setState(
+      {
+        showSubmitButton: true,
+        broker: e.target.getAttribute('value')
+      },
+      () => {
+        document.getElementById('submitButton').setAttribute('focus', true)
+      }
+    )
+  }
+
   handleSubmit = e => {
     e.preventDefault()
+    // const inputs = document.querySelectorAll('input')
+    // inputs.forEach(input => {
+    //   console.log(input.value)
+    // })
+    // // if(e.key === 'Enter') {
+    // //   console.log("enter has been hit")
+    // //   e.preventDefault()
+    // // }
     this.setState({
       formSubmitted: true
     })
   }
-  handleBroker = (e) => {
-    e.preventDefault()
+  handleBroker = e => {
+    // e.preventDefault()
+    // this.setState({
+    //   broker: e.target.value
+    // })
   }
-  handleEmail = (e) => {
-    e.preventDefault()
+  handleEmail = e => {
+    // e.preventDefault()
+    this.setState({
+      email: e.target.value
+    })
   }
-  handleName = (e) => {
-      e.preventDefault()
+  handleName = e => {
+    // e.preventDefault()
+    // this.setState({
+    //   name: e.target.value
+    // })
   }
   render() {
+ 
     const content = this.state.formSubmitted ? (
       <React.Fragment>
         <header>
@@ -44,26 +89,15 @@ export default class Form extends Component {
           <h2>Coming Soon</h2>
         </header>
         <form onSubmit={this.handleSubmit}>
-          <input id="input-1" type="text" placeholder="John Doe" required value={this.state.name} onChange={this.handleName}/>
-          <label htmlFor="input-1">
-            <span className="label-text">Full Name</span>
-            <span className="nav-dot" />
-            <div className="signup-button-trigger">Sign Up</div>
-          </label>
-          <input id="input-2" type="email" placeholder="email@address.com" required value={this.state.email}  onChange={this.handleEmail}/>
-          <label htmlFor="input-2">
-            <span className="label-text">Email</span>
-            <span className="nav-dot" />
-          </label>
-          
-          <input type="checkbox" id="input-3" required value={this.state.broker} onChange={this.handleBroker}/>
-          <label htmlFor="input-3" className="check-box">
-            <span className="label-text">Broker?</span>
-            <span className="nav-dot" />
-          </label>
-          <button type="submit">Submit</button>
-          <p className="tip">Press Tab</p>
-          <div className="signup-button">Sign up for exclusive updates</div>
+          <input name="username" placeholder="Username" type="text" />
+          <input id="pw" name="password" placeholder="Password" type="password" />
+          <input name="email" placeholder="E-Mail Address" type="text" />
+          <div className="agree">
+            <input id="agree" name="agree" type="checkbox" />
+            <label for="agree" />
+            Do you have a broker?
+          </div>
+          <input className="animated" type="submit" value="SIGN UP FOR EXCLUSIVE UPDATES" />
         </form>
       </React.Fragment>
     )
@@ -127,10 +161,3 @@ class FormSVG extends Component {
     )
   }
 }
-
-const InputThree = () => (
-  <label for="input-3">
-    <span className="label-text">Broker?</span>
-    <span className="nav-dot" />
-  </label>
-)
