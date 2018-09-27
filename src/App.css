@@ -2249,3 +2249,52 @@ input[type="submit"]:hover {
     transform: translateX(10px);
   }
 }
+
+
+@media screen and (max-width: 1124px) {
+ 
+}
+
+@media screen and (max-width: 980px) {
+ 
+}
+
+@media screen and (max-width: 768px) {
+  .mast__header {
+    padding: 0;
+  }
+ .mast__text {
+    white-space: normal;
+}
+.logo {
+    height: 100px;
+    width: 100px;
+}
+.logo .sign_up__link {
+    right: 10%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+    .mast__header {
+        font-size: 2em;
+  }
+ .mast__text {
+         font-size: 1em;
+    margin: 1em 0 0.5em;
+}
+.form_component h2 {
+      padding: 0;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+}
+
+@media screen and (max-width: 414px) {
+ 
+}
+
+
