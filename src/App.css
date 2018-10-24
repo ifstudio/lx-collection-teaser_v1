@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 @font-face {
   font-family: 'Visby Light';
   src: url('/VisbyCF-Light.otf');
@@ -27,7 +29,7 @@
 }
 
 .App {
-  overflow: hidden!important;
+  overflow: hidden !important;
 }
 
 .logo {
@@ -113,11 +115,14 @@ img:hover {
   width: 40%;
   right: 50px;
 }
+
 .arrow_down {
-  z-index: 2000;;
+  z-index: 2000;
+  ;
 }
+
 .arrow_down svg {
-  fill: none!important;
+  fill: none !important;
   stroke: #fff;
 }
 
@@ -406,11 +411,13 @@ svg {
   transition: all 1s ease-in-out;
 }
 
-.mast.animation_finished,.animation_finished.mast:after {
+.mast.animation_finished,
+.animation_finished.mast:after {
   background-color: rgba(17, 17, 17, .2);
 }
 
-.mast.animation_finished .mast__title,.mast.animation_finished .mast__text {
+.mast.animation_finished .mast__title,
+.mast.animation_finished .mast__text {
   opacity: 0;
 }
 
@@ -425,7 +432,7 @@ svg {
   background: rgba(17, 17, 17, 0.9);
 }
 
-.mast > header {
+.mast>header {
   z-index: 2;
   position: relative;
   text-align: center;
@@ -470,8 +477,9 @@ svg {
   -webkit-animation: letter-glow 0.7s 0s ease both;
   animation: letter-glow 0.7s 0s ease both;
 }
+
 .content__section:hover h2 {
-	/* animation: letter-glow 0.7s 0s ease both; */
+  /* animation: letter-glow 0.7s 0s ease both; */
 }
 
 .mast__title span:nth-child(1) {
@@ -1594,7 +1602,8 @@ p {
   animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite;
 }
 
-.mouse:before,.mouse:after {
+.mouse:before,
+.mouse:after {
   content: "";
   position: absolute;
   top: 0;
@@ -1669,7 +1678,8 @@ p {
     background-color: #4e5559;
   }
 
-  90%, 100% {
+  90%,
+  100% {
     background-color: #ffffff;
   }
 }
@@ -1723,7 +1733,8 @@ p {
     background-color: #4e5559;
   }
 
-  90%, 100% {
+  90%,
+  100% {
     background-color: #ffffff;
   }
 }
@@ -1747,13 +1758,15 @@ p {
     transform: scale(0.4) translateY(40px);
   }
 
-  15%, 19% {
+  15%,
+  19% {
     opacity: 0;
     -webkit-transform: scale(0.4) translateY(-20px);
     transform: scale(0.4) translateY(-20px);
   }
 
-  28%, 29.99% {
+  28%,
+  29.99% {
     opacity: 1;
     -webkit-transform: scale(1) translateY(-20px);
     transform: scale(1) translateY(-20px);
@@ -1777,13 +1790,15 @@ p {
     transform: scale(0.4) translateY(40px);
   }
 
-  45%, 49% {
+  45%,
+  49% {
     opacity: 0;
     -webkit-transform: scale(0.4) translateY(-20px);
     transform: scale(0.4) translateY(-20px);
   }
 
-  58%, 59.99% {
+  58%,
+  59.99% {
     opacity: 1;
     -webkit-transform: scale(1) translateY(-20px);
     transform: scale(1) translateY(-20px);
@@ -1807,13 +1822,15 @@ p {
     transform: scale(0.4) translateY(40px);
   }
 
-  75%, 79% {
+  75%,
+  79% {
     opacity: 0;
     -webkit-transform: scale(0.4) translateY(-20px);
     transform: scale(0.4) translateY(-20px);
   }
 
-  88%, 100% {
+  88%,
+  100% {
     opacity: 1;
     -webkit-transform: scale(1) translateY(-20px);
     transform: scale(1) translateY(-20px);
@@ -1839,13 +1856,15 @@ p {
     transform: scale(0.4) translateY(40px);
   }
 
-  15%, 19% {
+  15%,
+  19% {
     opacity: 0;
     -webkit-transform: scale(0.4) translateY(-20px);
     transform: scale(0.4) translateY(-20px);
   }
 
-  28%, 29.99% {
+  28%,
+  29.99% {
     opacity: 1;
     -webkit-transform: scale(1) translateY(-20px);
     transform: scale(1) translateY(-20px);
@@ -1869,13 +1888,15 @@ p {
     transform: scale(0.4) translateY(40px);
   }
 
-  45%, 49% {
+  45%,
+  49% {
     opacity: 0;
     -webkit-transform: scale(0.4) translateY(-20px);
     transform: scale(0.4) translateY(-20px);
   }
 
-  58%, 59.99% {
+  58%,
+  59.99% {
     opacity: 1;
     -webkit-transform: scale(1) translateY(-20px);
     transform: scale(1) translateY(-20px);
@@ -1899,13 +1920,15 @@ p {
     transform: scale(0.4) translateY(40px);
   }
 
-  75%, 79% {
+  75%,
+  79% {
     opacity: 0;
     -webkit-transform: scale(0.4) translateY(-20px);
     transform: scale(0.4) translateY(-20px);
   }
 
-  88%, 100% {
+  88%,
+  100% {
     opacity: 1;
     -webkit-transform: scale(1) translateY(-20px);
     transform: scale(1) translateY(-20px);
@@ -2111,6 +2134,7 @@ p {
     color: #ffffff;
   }
 }
+
 /*
   FORM
   ========================================================================================
@@ -2150,7 +2174,8 @@ form {
   height: 100%;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 20px 0px;
   background: transparent;
@@ -2160,6 +2185,7 @@ input[type="text"], input[type="password"] {
   color: white;
   font-size: 16px;
 }
+
 input[type=checkbox] {
   display: none;
 }
@@ -2179,7 +2205,7 @@ label {
   border: 3px solid #ba2424;
 }
 
-#agree:checked ~ label[for=agree] {
+#agree:checked~label[for=agree] {
   background: #fff;
   border: 1px solid #ba2424;
 }
@@ -2196,6 +2222,7 @@ input[type="submit"] {
   cursor: pointer;
   transition: background 0.3s ease-in-out;
 }
+
 input[type="submit"]:hover {
   /*  */
 }
@@ -2207,6 +2234,7 @@ input[type="submit"]:hover {
   text-align: center;
   font-weight: bold;
 }
+
 .forgot:hover {
   /* margin-top: 30px;
   display: block;
@@ -2239,62 +2267,113 @@ input[type="submit"]:hover {
 }
 
 @keyframes shake {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(0);
   }
-  10%, 30%, 50%, 70%, 90% {
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
     transform: translateX(-10px);
   }
-  20%, 40%, 60%, 80% {
+
+  20%,
+  40%,
+  60%,
+  80% {
     transform: translateX(10px);
   }
 }
 
 
-@media screen and (max-width: 1124px) {
- 
-}
+@media screen and (max-width: 1124px) {}
 
-@media screen and (max-width: 980px) {
- 
-}
+@media screen and (max-width: 980px) {}
 
 @media screen and (max-width: 768px) {
   .mast__header {
     padding: 0;
   }
- .mast__text {
+
+  .mast__text {
     white-space: normal;
-}
-.logo {
+  }
+
+  .logo {
     height: 100px;
     width: 100px;
-}
-.logo .sign_up__link {
+  }
+
+  .logo .sign_up__link {
     right: 10%;
   }
 }
 
 @media screen and (max-width: 480px) {
-    .mast__header {
-        font-size: 2em;
+  /* .App {
+    overflow-y: visible;
+    overflow-x: hidden;
+  } */
+
+  .logo {
+    height: 50px;
+    width: 50px;
+    top: 10px;
+    right: 10px;
   }
- .mast__text {
-         font-size: 1em;
+
+
+  .logo .sign_up__link {
+    right: -10%;
+    bottom: -65px;
+    font-size: 10px;
+  }
+
+  .mast__header {
+    font-size: 2em;
+  }
+
+  .mast__text {
+    font-size: .45em;
     margin: 1em 0 0.5em;
-}
-.form_component h2 {
-      padding: 0;
+  }
+
+  .mast__title {
+    font-size: .45em;
+  }
+
+  .form_component h2 {
+    padding: 0;
     text-align: center;
     line-height: 1.5;
     margin: 0;
     font-size: 1.2em;
+  }
+
+  .form_component {
+    padding-top: 0;
+    margin-bottom: 50px;
+  }
+
+  form {
+    display: block;
+    margin: 40px auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  form .agree label {
+    left: 30px;
+  }
+
+  input[type="submit"] {
+    width: 200px;
+    font-size: 10px;
+  }
 }
 
-}
-
-@media screen and (max-width: 414px) {
- 
-}
-
-
+@media screen and (max-width: 414px) {}

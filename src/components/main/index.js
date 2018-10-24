@@ -1,12 +1,17 @@
 import React, { Component } from 'react'
 import Form from '../form'
-import {TextOnly} from './TextOnly'
-import {TextAndImage} from './TextAndImage'
+import { TextOnly } from './TextOnly'
+import { TextAndImage } from './TextAndImage'
 import { Logo } from '../svg/logo'
+import { sections } from './sections'
+import { BROWSER } from '../../browser'
+
+const sum = (a, b) => a + b
 
 class Main extends Component {
   componentDidMount() {
     const uncommon = document.getElementById('uncommon')
+    const sections = Array.from(document.querySelectorAll('.content__section'))
     const signup = document.querySelector('.sign_up__link')
     const script1 = document.createElement('script')
     const script2 = document.createElement('script')
@@ -24,16 +29,22 @@ class Main extends Component {
     scripts.forEach(script => {
       body.appendChild(script)
     })
+    sections.length = sections.length - 1
+    const distanceToScroll = sections
+      .map(section => section.offsetHeight)
+      .reduce(sum)
 
     this.props.mainIsLoaded(true)
-    this.scrollHandler(uncommon, signup)
+    this.scrollHandler(uncommon, distanceToScroll, signup)
   }
 
-  scrollHandler = (uncommon, signup) => {
-    const getCurrentScroll = () => window.pageYOffset || document.documentElement.scrollTop
+  scrollHandler = (uncommon, distanceToScroll, signup) => {
+    const getCurrentScroll = () =>
+      window.pageYOffset || document.documentElement.scrollTop
 
     window.onscroll = () => {
-      if (getCurrentScroll() >= 7700) {
+      console.log('distanceToScroll', distanceToScroll)
+      if (getCurrentScroll() >= distanceToScroll) {
         uncommon.style.opacity = 0
         signup.style.opacity = 0
       } else {
@@ -49,43 +60,6 @@ class Main extends Component {
     })
 
   render() {
-    const sections = [
-      {
-        text: 'Discerning'
-      },
-      {
-        img: 'img/bw2.jpg',
-        text: 'Refined'
-      },
-      {
-        img: 'img/plane.jpg',
-        text: 'Iconic',
-      },
-      {
-        img: 'img/bg2.jpg',
-        text: 'Curated'
-      },
-      {
-        img: 'img/bw4.jpg',
-        text: 'Elevated'
-      },
-      {
-        text: 'Preferential'
-      },
-      {
-        img: 'img/pool.jpg',
-        text: 'Elegant'
-      },
-      {
-        img: 'img/piano.jpg',
-        text: 'Cultivated'
-      },
-      {
-        img: 'img/rain_car.jpg',
-        text: 'Uncommon'
-      }
-    ]
-
     return (
       <main className="main">
         <span className="logo">
@@ -95,11 +69,14 @@ class Main extends Component {
           </span>
         </span>
         <div className="content">
-         {
-           sections.map(section => (
-             section.img ? <TextAndImage {...section} /> : <TextOnly {...section} />
-           ))
-         }
+          {sections.map(
+            section =>
+              section.img ? (
+                <TextAndImage {...section} />
+              ) : (
+                <TextOnly {...section} />
+              )
+          )}
           <div className="content__section" />
           <div className="content__section">
             <Form />

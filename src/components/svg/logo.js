@@ -34,8 +34,8 @@ export const Logo = () => (
 
 export const X = () => (
   <svg width="180px" height="218px" viewBox="0 0 180 218" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="LXCollection_FinalLogo.1" transform="translate(-103.000000, -130.000000)" fill-rule="nonzero" fill="#fff">
+    <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="LXCollection_FinalLogo.1" transform="translate(-103.000000, -130.000000)" fillRule="nonzero" fill="#fff">
             <path d="M180,240 L246.73,347.23 L282.32,347.23 L214,237 L180,240 Z M103.74,347.23 L135,347.23 C129.43,342.23 126.64,337.02 126.64,331.75 C126.71198,328.457882 127.676267,325.247049 129.43,322.46 L147.43,296.22 L145.66,296.22 L127.87,322.15 C121.06,331.74 113.63,340.72 103.73,347.22 L103.74,347.23 Z M268.09,130.57 L236.82,130.57 C236.82,130.57 245.18,135.83 245.18,145.43 C244.56,152.55 241.18,156.57 238.37,161.22 L200.3,216.3 L147.06,130.56 L111.78,130.56 L181.08,241.68 L216.33,241.68 L201.23,217.53 L244.23,155.32 C250.73,145.72 258.16,137.06 268.06,130.56 L268.09,130.57 Z" id="Shape"></path>
             {/* <path d="M219.8,523.14 C199.18,551.76 173.64,567.46 135.8,567.46 C91.48,567.46 51.17,533.61 51.17,456.98 C51.17,384.35 91.17,346.5 131.49,346.5 C167.49,346.5 192.43,360.35 206.27,376.97 C215.5,388.36 221.66,403.75 221.66,403.75 L221.66,369.57 C219.123768,370.9963 216.259726,371.737297 213.35,371.72 C202.58,371.72 200.42,365.26 182.27,356.03 C167.18,348.34 147.79,345 131.48,345 C72.7,345 19.15,379.16 19.15,456.72 C19.15,523.5 61.93,569.05 135.79,569.05 C175.18,569.05 201.65,552.43 221.65,523.19 L219.8,523.19 L219.8,523.14 Z" id="Shape"></path> */}
         </g>
@@ -45,8 +45,8 @@ export const X = () => (
 
 export const C = () => (
   <svg width="203px" height="225px" viewBox="0 0 203 225" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <g id="LXCollection_FinalLogo.1" transform="translate(-19.000000, -345.000000)" fill-rule="nonzero" fill="#fff">
+      <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+          <g id="LXCollection_FinalLogo.1" transform="translate(-19.000000, -345.000000)" fillRule="nonzero" fill="#fff">
               <path d="M219.8,523.14 C199.18,551.76 173.64,567.46 135.8,567.46 C91.48,567.46 51.17,533.61 51.17,456.98 C51.17,384.35 91.17,346.5 131.49,346.5 C167.49,346.5 192.43,360.35 206.27,376.97 C215.5,388.36 221.66,403.75 221.66,403.75 L221.66,369.57 C219.123768,370.9963 216.259726,371.737297 213.35,371.72 C202.58,371.72 200.42,365.26 182.27,356.03 C167.18,348.34 147.79,345 131.48,345 C72.7,345 19.15,379.16 19.15,456.72 C19.15,523.5 61.93,569.05 135.79,569.05 C175.18,569.05 201.65,552.43 221.65,523.19 L219.8,523.19 L219.8,523.14 Z" id="Shape"></path>
           </g>
       </g>
@@ -55,8 +55,8 @@ export const C = () => (
 
 export const L = () => (
   <svg width="147px" height="217px" viewBox="0 0 147 217" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <g id="LXCollection_FinalLogo.1" fill-rule="nonzero" fill="#fff">
+  <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+      <g id="LXCollection_FinalLogo.1" fillRule="nonzero" fill="#fff">
           <path className='L' d="M35.41,216.66 L0.15,216.66 C3.59979034,210.740727 5.41503942,204.011191 5.41,197.16 L5.41,19.81 C5.44698994,12.8567254 3.63143453,6.01905382 0.15,1.42108547e-14 L35.43,1.42108547e-14 L35.43,215.11" id="Shape"></path>
           <path className='L' d="M35.43,215.11 L88.67,215.11 C134.17,215.11 146.86,187.57 146.86,187.57 L146.86,216.66 L35.41,216.66" id="Shape"></path>
       </g>

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "animejs": "^2.2.0",
+    "lodash": "^4.17.11",
     "mo-js": "^0.288.2",
     "purify-css": "^1.2.5",
     "react": "^16.3.2",
