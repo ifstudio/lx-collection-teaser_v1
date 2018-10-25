@@ -23,9 +23,16 @@
     <meta property="og:description" content="A highly curated collection of the most prestigious condominiums and architecture in the world.">
     <meta property="og:title" content="LX Collection">
 
-    <script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
-    <script src='https://code.createjs.com/createjs-2015.05.21.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/pixi.js/3.0.7/pixi.min.js'></script>
+    <script>
+      document.documentElement.className = "js";
+      var supportsCssVars = function () {
+        var e, t = document.createElement("style");
+        return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS
+          .supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+      };
+      supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+    </script>
+    <script src='intersection-observer.js'></script>
 
     <title>LX Collection</title>
   </head>
@@ -36,4 +43,5 @@
     </noscript>
     <div id="root"></div>
   </body>
+
 </html>

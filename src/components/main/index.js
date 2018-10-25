@@ -19,7 +19,7 @@ import {
 } from '../../utils/browser'
 import Entry from './entry'
 
-require('../../utils/intersection-observer')
+
 const sum = (a, b) => a + b
 
 class Main extends Component {
