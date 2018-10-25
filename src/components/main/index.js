@@ -1,13 +1,25 @@
-import React, { Component } from 'react'
+import React, {
+  Component
+} from 'react'
 import Form from '../form'
-import { TextOnly } from './TextOnly'
-import { TextAndImage } from './TextAndImage'
-import { Logo } from '../svg/logo'
-import { sections } from './sections'
-import { BROWSER } from '../../browser'
+import {
+  TextOnly
+} from './TextOnly'
+import {
+  TextAndImage
+} from './TextAndImage'
+import {
+  Logo
+} from '../svg/logo'
+import {
+  sections
+} from './sections'
+import {
+  BROWSER
+} from '../../utils/browser'
 import Entry from './entry'
-import imagesLoaded from 'imagesloaded'
 
+require('../../utils/intersection-observer')
 const sum = (a, b) => a + b
 
 class Main extends Component {
@@ -15,21 +27,17 @@ class Main extends Component {
     const uncommon = document.getElementById('uncommon')
     const sections = Array.from(document.querySelectorAll('.content__section'))
     const signup = document.querySelector('.sign_up__link')
-    // const script1 = document.createElement('script')
-    // const script2 = document.createElement('script')
-    // const script3 = document.createElement('script')
-    // const script4 = document.createElement('script')
-    // const body = document.querySelector('body')
 
     let observer
     let current = -1
     let allentries = []
 
-    // Preload all the images in the page..
-    // imagesLoaded(document.querySelectorAll('.content__img'), () => {
-    //   document.body.classList.remove('loading')
-
-    // })
+    if (!('IntersectionObserver' in window)) {
+      alert('No intersection observer')
+    }
+    // console.log(window)
+    // alert(window.IntersectionObserver)
+    // Need to find a fix on mobile
     if ('IntersectionObserver' in window) {
       document.body.classList.add('ioapi')
 
@@ -47,26 +55,15 @@ class Main extends Component {
               current = newcurrent
             }
           })
-        },
-        {
+        }, {
           threshold: 0.5
         }
       )
 
       sections.forEach(section => allentries.push(new Entry(section, observer)))
     }
-
-    // script1.src = '/js/imagesloaded.pkgd.min.js'
-    // script2.src = '/js/charming.min.js'
-    // script3.src = '/js/anime.min.js'
-    // script4.src = '/js/demo4.js'
-
-    // const scripts = [script1, script2, script3, script4]
-
-    // scripts.forEach(script => {
-    //   body.appendChild(script)
-    // })
     sections.length = sections.length - 1
+
     const distanceToScroll = sections
       .map(section => section.offsetHeight)
       .reduce(sum)
@@ -80,7 +77,6 @@ class Main extends Component {
       window.pageYOffset || document.documentElement.scrollTop
 
     window.onscroll = () => {
-      console.log('distanceToScroll', distanceToScroll)
       if (getCurrentScroll() >= distanceToScroll) {
         uncommon.style.opacity = 0
         signup.style.opacity = 0
@@ -97,29 +93,43 @@ class Main extends Component {
     })
 
   render() {
-    return (
-      <main className="main">
-        <span className="logo">
-          <Logo />
-          <span className="sign_up__link" onClick={this.scrollToBottom}>
-            Sign Up
-          </span>
-        </span>
-        <div className="content">
-          {sections.map(
-            section =>
-              section.img ? (
-                <TextAndImage {...section} />
-              ) : (
-                <TextOnly {...section} />
-              )
-          )}
-          <div className="content__section" />
-          <div className="content__section">
-            <Form />
-          </div>
-        </div>
-      </main>
+    return ( <
+      main className = "main" >
+      <
+      span className = "logo" >
+      <
+      Logo / >
+      <
+      span className = "sign_up__link"
+      onClick = {
+        this.scrollToBottom
+      } >
+      Sign Up <
+      /span> < /
+      span > <
+      div className = "content" > {
+        sections.map(
+          section =>
+          section.img ? ( <
+            TextAndImage { ...section
+            }
+            />
+          ) : ( <
+            TextOnly { ...section
+            }
+            />
+          )
+        )
+      } <
+      div className = "content__section" / >
+      <
+      div className = "content__section" >
+      <
+      Form / >
+      <
+      /div> < /
+      div > <
+      /main>
     )
   }
 }
