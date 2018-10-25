@@ -1,12 +1,8 @@
-import React, {
-  Component
-} from 'react'
+import React, { Component } from 'react'
 import IntroSVG from './components/introSVG'
 import Main from './components/main'
 import IntroText from './components/introText'
-import {
-  BROWSER
-} from './utils/browser'
+import { BROWSER } from './utils/browser'
 
 import './App.css'
 const mojs = require('mo-js')
@@ -38,7 +34,7 @@ class App extends Component {
       }
     })
 
-    document.addEventListener('click', function (e) {
+    document.addEventListener('click', function(e) {
       burst
         .tune({
           x: e.pageX,
@@ -72,37 +68,22 @@ class App extends Component {
   introTextAnimationCompleted = el => (el.style.display = 'none')
 
   render() {
-    const {
-      introIsRemoved,
-      fireIntro
-    } = this.state
-    const conditionalText = introIsRemoved ? ( <
-      IntroText endAnimation = {
-        this.introTextAnimationCompleted
-      }
-      />
+    const { introIsRemoved, fireIntro } = this.state
+    const conditionalText = introIsRemoved ? (
+      <IntroText endAnimation={this.introTextAnimationCompleted} />
     ) : null
-    const conditionalIntro = fireIntro ? ( <
-      IntroSVG fireIntro = {
-        fireIntro
-      }
-      animationIsOver = {
-        this.svgAnimationIsOver
-      }
+    const conditionalIntro = fireIntro ? (
+      <IntroSVG
+        fireIntro={fireIntro}
+        animationIsOver={this.svgAnimationIsOver}
       />
     ) : null
 
-    return ( <
-      div className = "App" > {
-        conditionalIntro
-      } {
-        conditionalText
-      } <
-      Main mainIsLoaded = {
-        this.fireIntro
-      }
-      /> < /
-      div >
+    return (
+      <div className="App">
+        {conditionalIntro} {conditionalText}
+        <Main mainIsLoaded={this.fireIntro} />
+      </div>
     )
   }
 }

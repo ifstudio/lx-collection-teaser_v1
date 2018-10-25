@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
+import SpanText from './SpanText'
 import { ArrowDown } from '../ArrowDown'
 
 export default class IntroText extends Component {
   componentDidMount () {
     const intro = document.getElementById('IntroText')
-
     setTimeout(() => {
       document.querySelector('.mast').classList.add('animation_finished')
       document.querySelector('.arrow_down').style.display = 'none'
     }, 6500)
-
     setTimeout(() => {
       this.props.endAnimation(intro)
     }, 7500)
@@ -26,14 +25,7 @@ export default class IntroText extends Component {
             <br />
             <hr className='sep' />
             <br />
-            <p className='mast__text js-spanize'>
-              <span> A </span> <span>highly</span> <span> curated </span>
-              <span> collection </span> <br /> <span> of </span>
-              <span> the </span> <span>most</span> <span> prestigious </span>
-              <span> condominiums </span> <span>and</span>
-              <span> architecture </span> <br /> <span> in </span>
-              <span>the</span> <span> world </span>
-            </p>
+            <SpanText />
           </header>
           <ArrowDown />
         </section>

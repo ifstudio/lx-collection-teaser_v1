@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import FormMarkUp from './FormMarkUp'
 import FormSVG from './FormSVG'
 
 export default class Form extends Component {
@@ -25,9 +26,7 @@ export default class Form extends Component {
 
   toggleBroker = e => {
     e.preventDefault()
-    console.log(e.target)
     document.querySelector('.yesno').setAttribute('focus', false)
-    console.log(e.target.getAttribute('value'))
     this.setState(
       {
         showSubmitButton: true,
@@ -64,11 +63,10 @@ export default class Form extends Component {
     })
   }
   render() {
- 
     const content = this.state.formSubmitted ? (
       <React.Fragment>
         <header>
-          <h2 className="">Thank You for Signing Up</h2>
+          <h2 className=""> Thank You for Signing Up </h2>
         </header>
         <FormSVG />
       </React.Fragment>
@@ -76,23 +74,18 @@ export default class Form extends Component {
       <React.Fragment>
         <header>
           <h2 className="">
-            A highly curated collection of the most prestigious condominiums and architecture in the world
+            A highly curated collection of the most prestigious condominiums and
+            architecture in the world
           </h2>
-          <h2>Coming Soon</h2>
+          <h2> Coming Soon </h2>
         </header>
-        <form onSubmit={this.handleSubmit}>
-          <input name="username" placeholder="Full Name" type="text" />
-          <input name="email" placeholder="E-Mail Address" type="text" />
-          <div className="agree">
-            <input id="agree" name="agree" type="checkbox" />
-            <label for="agree" />
-            Do you have a broker?
-          </div>
-          <input className="animated" type="submit" value="SIGN UP FOR EXCLUSIVE UPDATES" />
-        </form>
+        <FormMarkUp handleSubmit={this.handleSubmit} />
       </React.Fragment>
     )
-    return <div className="form_component">{content}</div>
+    return (
+      <div className="content__section">
+        <div className="form_component"> {content} </div>
+      </div>
+    )
   }
 }
-

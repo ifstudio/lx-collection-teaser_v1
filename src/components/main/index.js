@@ -1,24 +1,10 @@
-import React, {
-  Component
-} from 'react'
+import React, { Component } from 'react'
 import Form from '../form'
-import {
-  TextOnly
-} from './TextOnly'
-import {
-  TextAndImage
-} from './TextAndImage'
-import {
-  Logo
-} from '../svg/logo'
-import {
-  sections
-} from './sections'
-import {
-  BROWSER
-} from '../../utils/browser'
+import { TextOnly } from './TextOnly'
+import { TextAndImage } from './TextAndImage'
+import { Logo } from '../logo'
+import { sections } from './sections'
 import Entry from './entry'
-
 
 const sum = (a, b) => a + b
 
@@ -32,12 +18,6 @@ class Main extends Component {
     let current = -1
     let allentries = []
 
-    if (!('IntersectionObserver' in window)) {
-      alert('No intersection observer')
-    }
-    // console.log(window)
-    // alert(window.IntersectionObserver)
-    // Need to find a fix on mobile
     if ('IntersectionObserver' in window) {
       document.body.classList.add('ioapi')
 
@@ -55,7 +35,8 @@ class Main extends Component {
               current = newcurrent
             }
           })
-        }, {
+        },
+        {
           threshold: 0.5
         }
       )
@@ -93,43 +74,22 @@ class Main extends Component {
     })
 
   render() {
-    return ( <
-      main className = "main" >
-      <
-      span className = "logo" >
-      <
-      Logo / >
-      <
-      span className = "sign_up__link"
-      onClick = {
-        this.scrollToBottom
-      } >
-      Sign Up <
-      /span> < /
-      span > <
-      div className = "content" > {
-        sections.map(
-          section =>
-          section.img ? ( <
-            TextAndImage { ...section
-            }
-            />
-          ) : ( <
-            TextOnly { ...section
-            }
-            />
-          )
-        )
-      } <
-      div className = "content__section" / >
-      <
-      div className = "content__section" >
-      <
-      Form / >
-      <
-      /div> < /
-      div > <
-      /main>
+    return (
+      <main className="main">
+        <Logo scrollToBottom={this.scrollToBottom} />
+        <div className="content">
+          {sections.map(
+            section =>
+              section.img ? (
+                <TextAndImage {...section} />
+              ) : (
+                <TextOnly {...section} />
+              )
+          )}
+          <div className="content__section" />
+          <Form />
+        </div>
+      </main>
     )
   }
 }

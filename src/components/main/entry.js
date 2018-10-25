@@ -13,7 +13,7 @@ import charming from 'charming'
  */
 
 class Entry {
-  constructor(el, observer) {
+  constructor (el, observer) {
     this.DOM = {
       el: el
     }
@@ -30,7 +30,7 @@ class Entry {
       observer.observe(this.DOM.el)
     }
   }
-  enter(direction = 'down') {
+  enter (direction = 'down') {
     this.DOM.title.word.style.opacity = 1
 
     this.DOM.title.letters.forEach((letter, pos) => {
@@ -55,14 +55,9 @@ class Entry {
     })
 
     anime.remove(this.DOM.image)
-    // anime({
-    //     targets: this.DOM.image,
-    //     duration: 800,
-    //     easing: 'easeOutQuad',
-    //     rotate: () => direction === 'down' ? 5 : -5
-    // });
   }
-  exit(direction = 'down') {
+
+  exit (direction = 'down') {
     this.DOM.title.letters.forEach((letter, pos) => {
       anime.remove(letter)
       let letterAnim = {
