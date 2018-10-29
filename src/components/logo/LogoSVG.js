@@ -1,7 +1,8 @@
 import React from 'react'
 
-export const LogoSVG = () => (
+export const LogoSVG = props => (
   <svg
+    onClick={props.scrollToTop}
     id='Layer_1'
     data-name='Layer 1'
     xmlns='http://www.w3.org/2000/svg'

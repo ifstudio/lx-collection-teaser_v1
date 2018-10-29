@@ -60,6 +60,8 @@ class Main extends Component {
     window.onscroll = () => {
       if (getCurrentScroll() >= distanceToScroll) {
         uncommon.style.opacity = 0
+      }
+      if (getCurrentScroll() >= distanceToScroll * 2.85) {
         signup.style.opacity = 0
       } else {
         signup.style.opacity = 1

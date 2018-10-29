@@ -1645,11 +1645,11 @@ input[type=checkbox] {
 
 label {
   /* display: block; */
+
   position: absolute;
-  right: 130px;
-  bottom: 32px;
-  width: 12px;
-  height: 12px;
+  height: 20px;
+  width: 20px;
+  right: 0;
   border-radius: 50%;
   background: transparent;
   content: "";
@@ -1659,8 +1659,10 @@ label {
 }
 
 #agree:checked~label[for=agree] {
-  background: #fff;
-  border: 1px solid #ba2424;
+
+  background-image: radial-gradient(#ba2424 1px,
+    #fff 100%);
+  border: 3px solid #ba2424
 }
 
 input[type="submit"] {
@@ -1699,11 +1701,17 @@ input[type="submit"]:hover {
 
 .agree {
   padding: 30px 0px;
-  font-size: 12px;
+  font-size: 18px;
   position: relative;
-  text-indent: 25px;
+
   line-height: 15px;
+  text-align: left;
+  font-family: "Visby Light";
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
+
 
 ::-webkit-input-placeholder {
   color: #fff;
@@ -1719,7 +1727,9 @@ input[type="submit"]:hover {
   margin: auto;
 }
 
-
+.logo svg {
+  cursor: pointer;
+}
 
 
 @media screen and (max-width: 768px) {
@@ -1734,7 +1744,9 @@ input[type="submit"]:hover {
   .logo {
     height: 100px;
     width: 100px;
+
   }
+
 
   .logo .sign_up__link {
     right: 10%;
@@ -1794,9 +1806,9 @@ input[type="submit"]:hover {
     height: 100%;
   }
 
-  form .agree label {
+  /* form .agree label {
     left: 30px;
-  }
+  } */
 
   input[type="submit"] {
     width: 200px;
