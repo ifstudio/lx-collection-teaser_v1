@@ -27,6 +27,11 @@ class Main extends Component {
             if (entry.intersectionRatio > 0.5) {
               const newcurrent = sections.indexOf(entry.target)
               if (newcurrent === current) return
+              if (newcurrent === 8) {
+                signup.style.opacity = 0
+              } else {
+                signup.style.opacity = 1
+              }
               const direction = newcurrent > current
               if (current >= 0) {
                 allentries[current].exit(direction ? 'down' : 'up')
@@ -50,21 +55,16 @@ class Main extends Component {
       .reduce(sum)
 
     this.props.mainIsLoaded(true)
-    this.scrollHandler(uncommon, distanceToScroll, signup)
+    this.scrollHandler(uncommon, distanceToScroll)
   }
 
-  scrollHandler = (uncommon, distanceToScroll, signup) => {
+  scrollHandler = (uncommon, distanceToScroll) => {
     const getCurrentScroll = () =>
       window.pageYOffset || document.documentElement.scrollTop
 
     window.onscroll = () => {
       if (getCurrentScroll() >= distanceToScroll) {
         uncommon.style.opacity = 0
-      }
-      if (getCurrentScroll() >= distanceToScroll * 2.85) {
-        signup.style.opacity = 0
-      } else {
-        signup.style.opacity = 1
       }
     }
   }

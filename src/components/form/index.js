@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import FormMarkUp from './FormMarkUp'
 import FormSVG from './FormSVG'
+import { scrollToTop } from '../../utils/scrollToTop'
 
 export default class Form extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      // name: '',
-      // email: '',
+      name: '',
+      email: '',
       broker: false,
       formSubmitted: false,
       showSubmitButton: true
@@ -19,7 +20,6 @@ export default class Form extends Component {
     if (name.length === 0 || email.length === 0) {
     }
     if (e.key === 'Enter') {
-      console.log('enter has been hit')
       e.preventDefault()
     }
   }
@@ -40,14 +40,26 @@ export default class Form extends Component {
 
   handleSubmit = e => {
     e.preventDefault()
-    this.setState({
-      formSubmitted: true
-    })
+    alert(
+      `Form Submitted: ${this.state.name}, ${this.state.email}, ${
+        this.state.broker
+      }`
+    )
+    this.setState(
+      {
+        formSubmitted: true
+      },
+      () => {
+        setTimeout(() => {
+          scrollToTop(e)
+        }, 4000)
+      }
+    )
   }
   handleBroker = e => {
     e.preventDefault()
     this.setState({
-      broker: e.target.value
+      broker: !this.state.broker
     })
   }
   handleEmail = e => {
@@ -79,7 +91,12 @@ export default class Form extends Component {
           </h2>
           <h2> Coming Soon </h2>
         </header>
-        <FormMarkUp handleSubmit={this.handleSubmit} />
+        <FormMarkUp
+          handleSubmit={this.handleSubmit}
+          handleBroker={this.handleBroker}
+          handleEmail={this.handleEmail}
+          handleName={this.handleName}
+        />
       </React.Fragment>
     )
     return (

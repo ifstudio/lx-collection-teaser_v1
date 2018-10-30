@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 @font-face {
@@ -13,7 +14,7 @@
 
 /* Color schemes */
 
-.demo-4 {
+.lx-collection {
   --color-text: #fff;
   --color-bg: #000 url(/img/city-scape.jpg) no-repeat;
   --color-link: #828282;
@@ -164,7 +165,7 @@ img:hover {
 }
 
 @media screen and (max-width: 40em) {
-  .demo-4 {
+  .lx-collection {
     background-position: 50% 12rem;
   }
 }
