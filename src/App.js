@@ -3,7 +3,7 @@ import IntroSVG from './components/introSVG'
 import Main from './components/main'
 import IntroText from './components/introText'
 import { BROWSER } from './utils/browser'
-
+import './base.css'
 import './App.css'
 const mojs = require('mo-js')
 
