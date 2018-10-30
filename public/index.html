@@ -17,7 +17,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    
 
     <!-- Facebook Open Graph Data -->
 
@@ -46,7 +46,8 @@
     <meta property="og:image:width" content="240">
     <meta property="og:site_name" content="https://lxcollection.com" />
     <meta property="article:tag" content="LX Collection, a highly curated collection of the most prestigious condominiums and architecture in the world." />
-<!-- 
+  <script src="https://unpkg.com/css-vars-ponyfill@1"></script>
+
     <script>
       document.documentElement.className = "js";
       var supportsCssVars = function () {
@@ -54,8 +55,8 @@
         return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS
           .supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
       };
-      supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
-    </script> -->
+supportsCssVars() || cssVars();
+    </script>
     <script src='intersection-observer.js'></script>
 
     <title>LX Collection</title>
@@ -66,10 +67,7 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
-    <script src="https://unpkg.com/css-vars-ponyfill@1"></script>
-    <script>
-      cssVars()
-    </script>
+  
   </body>
 
 </html>
