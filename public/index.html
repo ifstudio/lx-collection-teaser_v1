@@ -46,16 +46,28 @@
     <meta property="og:image:width" content="240">
     <meta property="og:site_name" content="https://lxcollection.com" />
     <meta property="article:tag" content="LX Collection, a highly curated collection of the most prestigious condominiums and architecture in the world." />
-  
-  <script>
-    document.documentElement.className = "js";
-    var supportsCssVars = function () {
-      var e, t = document.createElement("style");
-      return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS
-        .supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
-    };
-    supportsCssVars() || alert('Please upgrade your browser');
-  </script>
+
+    <script>
+      (function () {
+        if (!Array.from) {
+          Array.from = function (object) {
+            'use strict';
+            return [].slice.call(object);
+          };
+        }
+      })();
+    </script>
+
+    <script>
+      document.documentElement.className = "js";
+      var supportsCssVars = function () {
+        var e, t = document.createElement("style");
+        return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS
+          .supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+      };
+      supportsCssVars() || console.log('Please upgrade your browser');
+    </script>
+
     <script src='intersection-observer.js'></script>
 
     <title>LX Collection</title>
@@ -66,7 +78,7 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
-  
+
   </body>
 
 </html>

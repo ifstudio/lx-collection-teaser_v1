@@ -16,6 +16,7 @@ class App extends Component {
   }
   componentDidMount() {
     BROWSER.init()
+    
 
     const burst = new mojs.Burst({
       left: 0,
