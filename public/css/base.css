@@ -209,28 +209,15 @@ table {
 
 body {
 	min-height: 100vh;
-	color: #57585c;
-	color: var(--color-text);
 	background-color: #fff;
-	background: var(--color-bg);
+	background: #000;
 	background-size: contain;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x: hidden;
 }
 
-a {
-	text-decoration: none;
-	color: var(--color-link);
-	outline: none;
-	cursor: pointer;
-}
 
-a:hover,
-a:focus {
-	color: var(--color-link-hover);
-	outline: none;
-}
 
 button:focus {
 	outline: none;
@@ -245,7 +232,7 @@ button:focus {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: var(--color-bg);
+	background: #000 url(../img/city-scape.jpg) no-repeat;
 }
 
 .js .loading::after {
@@ -260,7 +247,6 @@ button:focus {
 	pointer-events: none;
 	border-radius: 50%;
 	opacity: 0.4;
-	background: var(--color-link);
 	animation: loaderAnim 0.7s linear infinite alternate forwards;
 }
 
@@ -354,7 +340,7 @@ main {
 	-webkit-writing-mode: vertical-lr;
 	writing-mode: vertical-lr;
 	z-index: 100;
-	color: var(--color-info);
+	
 	text-align: right;
 }
 
@@ -375,7 +361,7 @@ main {
 
 a.demo--current {
 	pointer-events: none;
-	color: var(--color-link-hover);
+	
 }
 
 .content {
@@ -426,9 +412,9 @@ a.demo--current {
 
 .content__main,
 .content__text {
-	color: var(--color-scroll-text);
-	font-size: var(--fontsize-scroll-text);
-	font-family: var(--font-scroll-text);
+	color: #fff;
+	font-size: 3vmax;
+	font-family: 'Visby Light';
 	margin: 0;
 	line-height: 1;
 	text-transform: lowercase;
@@ -438,7 +424,7 @@ a.demo--current {
 .content__main,
 .content__contact {
 	position: absolute;
-	bottom: calc(var(--fontsize-scroll-text) * 1.5 + 6vmax);
+	bottom: calc(3vmax * 1.5 + 6vmax);
 }
 
 .content__main span {
@@ -465,8 +451,8 @@ a.demo--current {
 }
 
 .content__contact {
-	font-size: calc(var(--fontsize-scroll-text) / 2);
-	font-family: var(--font-scroll-text);
+	font-size: calc(3vmax / 2);
+	font-family: 'Visby Light';
 }
 
 .content__contact a:last-child {
@@ -515,6 +501,6 @@ a.demo--current {
 
 	.content__main,
 	.content__contact {
-		bottom: calc(var(--fontsize-scroll-text) * 1.5 + 15vh);
+		bottom: calc(3vmax * 1.5 + 15vh);
 	}
 }

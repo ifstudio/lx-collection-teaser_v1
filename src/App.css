@@ -15,16 +15,14 @@
 /* Color schemes */
 
 .lx-collection {
-  --color-text: #fff;
-  --color-bg: #000 url(/img/city-scape.jpg) no-repeat;
-  --color-link: #828282;
+  color: #fff;
+  background: #000 url(/img/city-scape.jpg) no-repeat;
+  
   /* background-color: #000; */
   background-size: contain;
   background-position: top;
-  --color-link-hover: #fff;
-  --color-info: #fff;
-  --color-scroll-text: #fff;
-  --font-scroll-text: 'Visby Light';
+
+  font-family: 'Visby Light';
   height: 100%;
   width: 100%;
 }
