@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import IntroSVG from './components/introSVG'
 import Main from './components/main'
 import IntroText from './components/introText'
+import CursorFollowAnimation from './components/cursorFollowAnimation'
 import { BROWSER } from './utils/browser'
 import './App.css'
 const mojs = require('mo-js')
@@ -81,6 +82,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        <CursorFollowAnimation />
         {conditionalIntro} {conditionalText}
         <Main mainIsLoaded={this.fireIntro} />
       </div>
