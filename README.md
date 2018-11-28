@@ -1,3 +1,12 @@
+# Start it up
+
+Run 'yarn install' in the root directory and upon completion run 'yarn start' to fire up the application.
+ 
+After you've made your changes, be sure to 'git add, git commit and push'. Any push to the master branch on Github will automatically redeploy the web site.
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
